@@ -13,33 +13,32 @@
         android:layout_margin="8dp"
         >
 
-    <ImageView
-        android:id="@+id/iv_name"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerInParent="true"
-        android:src="@mipmap/ic_launcher"
-        />
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher" />
+
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/tv_detail_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/iv_name"
-            android:layout_marginTop="50dp"
+            android:layout_below="@+id/iv_img"
             android:layout_centerHorizontal="true"
-            android:textSize="16sp"
+            android:layout_marginTop="50dp"
             android:text="Nombre"
-            />
+            android:textSize="16sp" />
+
         <TextView
-            android:id="@+id/tv_description"
+            android:id="@+id/tv_department"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_name"
-            android:textSize="14sp"
-            android:text="Descripcion"
+            android:layout_below="@+id/tv_detail_name"
             android:layout_centerHorizontal="true"
             android:padding="2dp"
-            />
+            android:text="Departamento"
+            android:textSize="14sp" />
 
 
     </RelativeLayout>

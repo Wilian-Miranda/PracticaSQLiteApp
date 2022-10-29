@@ -6,7 +6,9 @@ import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.EditText
+import android.widget.GridView
 import android.widget.Toast
 import java.util.*
 
@@ -14,7 +16,30 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etCode: EditText;
     private lateinit var etDescription: EditText;
     private lateinit var etPrice: EditText;
+/*
+    //variables del otro proyecto de clase
+    private lateinit var gvTable:GridView;
 
+    //datos qu vamos a ir usando
+    var name_array = arrayListOf<String>("Kemberly", "El Manu", "El Pepe","Christina");
+    var department_array = arrayListOf<String>("Chalatenango","San Vicente","San Salvador","Chalatenango");
+    var data_imagen_array = arrayOf(
+        R.drawable.image1,
+        R.drawable.image2,
+        R.drawable.image3,
+        R.drawable.image4
+    );
+
+    var listImg = arrayOf(
+        item(data_imagen_array.get(0),name_array.get(0),department_array.get(0)),
+        item(data_imagen_array.get(1),name_array.get(1),department_array.get(1)),
+        item(data_imagen_array.get(2),name_array.get(2),department_array.get(2)),
+        item(data_imagen_array.get(3),name_array.get(3),department_array.get(3)),
+    );
+    var arrayDataitem = ArrayList<item>();
+
+    var adapter: AdapterCustome? = null;
+*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,6 +47,17 @@ class MainActivity : AppCompatActivity() {
         etCode = findViewById(R.id.etn_code);
         etDescription = findViewById(R.id.et_description);
         etPrice = findViewById(R.id.etnd_price);
+/*
+        //cargamos datos del grid view
+        gvTable = findViewById(R.id.gv_table);
+
+        adapter = AdapterCustome(arrayDataitem,this);
+        gvTable.onItemClickListener = object :AdapterView.OnItemClickListener{
+            override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+            }
+
+        }*/
     }
 
 
@@ -183,4 +219,11 @@ class MainActivity : AppCompatActivity() {
         };
         return valor;
     }
+
+    //el otro proyecto
+    fun windowGridView(vista:View){
+        val window:Intent = Intent(applicationContext,GridCardViewApp::class.java);
+        startActivity(window);
+    }
+
 }
